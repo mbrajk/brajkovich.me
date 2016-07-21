@@ -40,11 +40,19 @@ body {
     #content {
         width: 450px;
     }
+    
+    .padding-right-160 {
+        padding-right: 260px;
+    }
 }
 
 @media (min-width: 800px){
     #content {
         width: 800px;
+    }
+    
+    .padding-right-160 {
+        padding-right: 160px;
     }
 }
 
@@ -73,8 +81,6 @@ body {
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
-
-
 .content-body {
     padding-left: 30px;
     padding-right: 30px;
@@ -82,6 +88,6 @@ body {
 
 .content-header-text {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     color: #2B4B6F;
 }
