@@ -91,3 +91,11 @@ body {
     font-size: 24px;
     color: #2B4B6F;
 }
+
+.content-body-tech {
+    color: gray;
+}
+
+.content-body-project-title > b{
+    color: #2B4B6F;
+}
