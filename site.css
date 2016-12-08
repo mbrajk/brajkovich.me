@@ -83,6 +83,18 @@ body {
     color: #2B4B6F;
 }
 
+.fa-instagram {
+    color: white;
+    background: #2B4B6F;
+    font-size: 60px;
+    line-height: 86%;
+    height: 50px;
+    width: 50px;
+    border-radius: 16px;
+    position: relative;
+    top: 5px;
+}
+
 a{
     color: #2B4B6F;
     font-weight: bold;
