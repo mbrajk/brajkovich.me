@@ -104,3 +104,7 @@ div p, small {
     text-decoration: none;
     display: inline-block;
 }
+
+#content-socialize .content-body {
+    margin-top: 1em;
+}
