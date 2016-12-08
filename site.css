@@ -35,23 +35,20 @@ body {
     
 }
 
+.margin-right-160 {
+        width:24%;
+        text-align: center;
+    }
+
 @media (max-width: 799px){
     #content {
         width: 450px;
-    }
-    
-    .padding-right-160 {
-        padding-right: 260px;
-    }
+    }    
 }
 
 @media (min-width: 800px){
     #content {
         width: 800px;
-    }
-    
-    .padding-right-160 {
-        padding-right: 160px;
     }
 }
 
@@ -97,4 +94,28 @@ body {
 
 .content-body-project-title > b{
     color: #2B4B6F;
+}
+
+.fa{
+    color: #2B4B6F;
+}
+
+a{
+    color: #2B4B6F;
+    font-weight: bold;
+}
+
+.no-decoration {
+    text-decoration: none;
+    display: inline-block;
+}
+
+div p, small {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.width-100{
+    width: 100%;
+    display: inline-block;
 }
