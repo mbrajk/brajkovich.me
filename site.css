@@ -58,6 +58,13 @@ body {
     border-bottom: 1px solid rgba(204, 204, 240, 0.7);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 10px grey;
+    transition: box-shadow 0.3s;
+}
+#content section:hover {
+    box-shadow: 15px 15px 15px grey;
+    transition: box-shadow 0.3s;
 }
 
 .content-body {
