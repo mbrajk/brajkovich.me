@@ -10,20 +10,27 @@
     }
 }
 
+:root {
+    --main-color: #2B4B6F;
+    --bg-color:  rgba(213, 222, 231, 0.5);
+    --highlight-color: #D5DEE7;
+    --border-color: rgba(204, 204, 240, 0.7);
+}
+
 #header {
     width: 100%;
     height: 80px;
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: #2B4B6F;
+    background-color: var(--main-color);
     border-bottom: 1px solid grey;
     font-weight: bolder;
     box-shadow: 0px 5px 10px grey;
 }
 
 #header-text {
-    color: #D5DEE7;
+    color: var(--highlight-color);
     font-size: 30px;
     position: relative;
     line-height: 80px;
@@ -32,7 +39,7 @@
 
 body {
     font-family: Helvetica,Arial,sans-serif;
-    background-color: rgba(213, 222, 231, 0.5);
+    background-color: var(--bg-color);
 }
 
 #content {
@@ -41,21 +48,22 @@ body {
 }
 
 .content-header {
-    text-align: center;
-    padding-top: 5px;
+    text-align: left;
+    padding: 10px 0px 10px 0px;
+    background-color: var(--main-color);
 }
 
 #content section:first-child {
-    border: 1px solid rgba(204, 204, 240, 0.7);
+    border: 1px solid var(--border-color);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
 #content section {
     background-color: white;
-    border-left: 1px solid rgba(204, 204, 240, 0.7);
-    border-right: 1px solid rgba(204, 204, 240, 0.7);
-    border-bottom: 1px solid rgba(204, 204, 240, 0.7);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     margin-bottom: 30px;
@@ -68,14 +76,16 @@ body {
 }
 
 .content-body {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 10px 40px 20px 40px;
+    text-align: justify;
+    line-height: 1.4;
 }
 
 .content-header-text {
     font-weight: bold;
     font-size: 24px;
-    color: #2B4B6F;
+    color: var(--highlight-color);
+    margin-left:35px;
 }
 
 .content-body-tech {
@@ -83,16 +93,16 @@ body {
 }
 
 .content-body-project-title > b{
-    color: #2B4B6F;
+    color: var(--main-color);
 }
 
 .fa{
-    color: #2B4B6F;
+    color: var(--main-color);
 }
 
 .invertagram {
     color: white;
-    background: #2B4B6F;
+    background: var(--main-color);
     font-size: 60px !important;
     line-height: 74% !important;
     height: 44px;
@@ -103,7 +113,7 @@ body {
 }
 
 a{
-    color: #2B4B6F;
+    color: var(--main-color);
     font-weight: bold;
 }
 
