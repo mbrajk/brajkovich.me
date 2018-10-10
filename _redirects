@@ -1,3 +1,2 @@
 # Redirect domain aliases to primary domain
-https://mike.brajkovich.me/* https://www.brajkovich.me/:splat 301!
-brajkovich.me/* brajkovich.me/
+https://mike.brajkovich.me/* https://www.brajkovich.me/ 301!
