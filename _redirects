@@ -1,0 +1,4 @@
+# Redirect domain aliases to primary domain
+https://brajkovich.me/* https://mike.brajkovich.me/ 301!
+https://www.brajkovich.me/* https://mike.brajkovich.me/ 301!
+https://m.brajkovich.me/* https://mike.brajkovich.me/ 301!
