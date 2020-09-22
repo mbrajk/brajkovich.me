@@ -97,10 +97,6 @@ p {
     padding: 10px 40px 20px 40px;
     text-align: justify;
     line-height: 1.4;
-
-    p {
-        text-align: center;
-    }
 }
 
 .content-header-text {
@@ -159,5 +155,9 @@ div p > small {
 #content-socialize { 
     .content-body {
         margin-top: 1em;
+    }
+
+    p {
+        text-align: center;
     }
 }

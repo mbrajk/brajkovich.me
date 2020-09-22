@@ -90,9 +90,6 @@ p {
   text-align: justify;
   line-height: 1.4;
 }
-.content-body p {
-  text-align: center;
-}
 
 .content-header-text {
   font-weight: bold;
@@ -149,6 +146,9 @@ div p > small {
 
 #content-socialize .content-body {
   margin-top: 1em;
+}
+#content-socialize p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=site.css.map */
