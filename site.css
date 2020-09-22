@@ -90,6 +90,9 @@ p {
   text-align: justify;
   line-height: 1.4;
 }
+.content-body p {
+  text-align: center;
+}
 
 .content-header-text {
   font-weight: bold;
