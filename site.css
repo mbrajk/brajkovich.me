@@ -13,6 +13,10 @@ body {
   background-color: rgba(213, 222, 231, 0.5);
 }
 
+p {
+  line-height: 2rem;
+}
+
 #header {
   width: 100%;
   height: 80px;
@@ -142,6 +146,9 @@ div p > small {
 
 #content-socialize .content-body {
   margin-top: 1em;
+}
+#content-socialize p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=site.css.map */
