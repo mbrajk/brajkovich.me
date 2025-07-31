@@ -112,12 +112,14 @@ header {
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
 }
 
-header .container {
+header nav {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 }
 
 header .logo {
@@ -135,7 +137,8 @@ header .nav-links a {
     transition: color 0.3s ease;
 }
 
-header .nav-links a:hover {
+header .nav-links a:hover,
+header .nav-links a.active {
     color: #7986cb;
 }
 
@@ -171,9 +174,9 @@ header .contact-button:hover {
 }
 
 
-/* Hero Section */
+/* Banner Section */
 
-#hero {
+#banner {
     position: relative;
     height: calc(100vh - 68px);
     display: flex;
@@ -183,7 +186,7 @@ header .contact-button:hover {
     color: var(--white);
 }
 
-#hero .overlay {
+#banner .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -194,7 +197,7 @@ header .contact-button:hover {
     z-index: 10;
 }
 
-#hero .background-image {
+#banner .background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -203,27 +206,27 @@ header .contact-button:hover {
     object-fit: cover;
 }
 
-#hero .content {
+#banner .content {
     position: relative;
     z-index: 20;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 
-#hero h1 {
+#banner h1 {
     font-size: 3rem;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 1rem;
 }
 
-#hero p {
+#banner p {
     font-size: 1.25rem;
     color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
-#hero .button-group {
+#banner .button-group {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
@@ -464,11 +467,11 @@ footer {
         display: none;
     }
 
-    #hero h1 {
+    #banner h1 {
         font-size: 4.5rem;
     }
 
-    #hero p {
+    #banner p {
         font-size: 1.5rem;
     }
 
