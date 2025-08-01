@@ -31,9 +31,8 @@ body {
     color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin:0px;
 }
-
-/* Reusable Components */
 
 .container {
     max-width: 1140px;
@@ -114,8 +113,6 @@ header {
 
 header nav {
     max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
