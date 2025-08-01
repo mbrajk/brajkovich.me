@@ -29,9 +29,9 @@
                 <a href="#contact" class="contact-button">Contact</a>
             </div>
             <div>
-                <button id="mobile-menu-button">
+                <span id="mobile-menu-button">
                     <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
+                </span>
             </div>
         </nav>
         <div id="mobile-menu">
@@ -231,19 +231,29 @@
     </footer>
 
     <script>
+
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+            mobileMenu.classList.toggle('open');
         });
         const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
         for (let link of mobileMenuLinks) {
             link.addEventListener('click', () => {
-                if (mobileMenu.style.display === 'block') {
-                    mobileMenu.style.display = 'none';
+                if (mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
                 }
             });
         }
+
+        // Close mobile menu on resize to desktop breakpoint
+        function handleResize() {
+            const hamburgerHidden = window.innerWidth >= 768;
+            if (hamburgerHidden && mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+            }
+        }
+        window.addEventListener('resize', handleResize);
 
         const navLinks = document.querySelectorAll('.nav-links a');
         const sections = document.querySelectorAll('section');

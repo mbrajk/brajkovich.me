@@ -25,6 +25,10 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-primary);
@@ -101,8 +105,6 @@ body {
     border: 1px solid var(--tag-border);
 }
 
-/* Header */
-
 header {
     position: sticky;
     top: 0;
@@ -153,25 +155,40 @@ header .contact-button:hover {
 }
 
 #mobile-menu-button {
+    cursor: pointer;
     color: var(--white);
 }
 
+
 #mobile-menu {
-    display: none;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+#mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #mobile-menu a {
     display: block;
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
+    color: var(--white);
 }
 
 #mobile-menu a:hover {
     background-color: var(--accent-secondary);
 }
 
-
-/* Banner Section */
 
 #banner {
     position: relative;
@@ -230,8 +247,6 @@ header .contact-button:hover {
     gap: 1rem;
 }
 
-/* About Section */
-
 #about {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -257,8 +272,6 @@ header .contact-button:hover {
 #about p + p {
     margin-top: 1rem;
 }
-
-/* Experience Section */
 
 #experience {
     padding-top: 5rem;
@@ -306,8 +319,6 @@ header .contact-button:hover {
 #experience .card ul > * + * {
     margin-top: 0.5rem;
 }
-
-/* Projects Section */
 
 #projects {
     padding-top: 5rem;
@@ -364,8 +375,6 @@ header .contact-button:hover {
     margin-top: auto;
     cursor: not-allowed;
 }
-
-/* Skills Section */
 
 #skills {
     padding-top: 5rem;
@@ -432,14 +441,10 @@ header .contact-button:hover {
     background-color: var(--accent-primary-hover);
 }
 
-/* Footer */
-
 footer {
     text-align: center;
     padding: 1.5rem;
 }
-
-/* Media Queries */
 
 @media (min-width: 640px) {
     #experience .card-header {
