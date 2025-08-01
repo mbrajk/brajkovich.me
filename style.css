@@ -114,7 +114,6 @@ header {
 }
 
 header nav {
-    max-width: 1140px;
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -460,6 +459,7 @@ footer {
 
 @media (min-width: 768px) {
     header .nav-links {
+        margin-left:auto;
         display: flex;
         align-items: center;
         gap: 1.5rem;
