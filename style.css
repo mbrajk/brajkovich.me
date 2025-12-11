@@ -191,7 +191,7 @@ header .contact-button:hover {
 
 #banner {
     position: relative;
-    height: calc(100vh - 68px);
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -459,7 +459,7 @@ footer {
 
 @media (min-width: 768px) {
     header .nav-links {
-        margin-left:auto;
+        margin-left: auto;
         display: flex;
         align-items: center;
         gap: 1.5rem;
