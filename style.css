@@ -442,7 +442,7 @@ header .contact-button:hover {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
     margin-top: 3rem;
 }
 
@@ -455,6 +455,10 @@ header .contact-button:hover {
 
 .social-icon:hover {
     fill: var(--accent-primary);
+    transform: translateY(-3px);
+}
+
+.social-icon-linkedin-fix {
     transform: translateY(-3px);
 }
 
@@ -500,4 +504,9 @@ footer {
     .col-span-2 {
         grid-column: span 2;
     }
+}
+
+.strudel-embed {
+    align-self: center;
+    max-width: 100%;
 }
