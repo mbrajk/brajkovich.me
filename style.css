@@ -440,6 +440,25 @@ header .contact-button:hover {
     background-color: var(--accent-primary-hover);
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.social-icon {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    fill: var(--accent-primary);
+    transform: translateY(-3px);
+}
+
 footer {
     text-align: center;
     padding: 1.5rem;
