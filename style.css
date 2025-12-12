@@ -506,7 +506,26 @@ footer {
     }
 }
 
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
 .strudel-embed {
     align-self: center;
-    max-width: 100%;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    border: 0;
+}
+
+@media (max-width: 767px) {
+    .strudel-embed {
+        height: 300px;
+    }
+
+    .social-links {
+        gap: 2rem;
+    }
 }
