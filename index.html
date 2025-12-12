@@ -28,7 +28,7 @@
                 <a href="#contact" class="contact-button">Contact</a>
             </div>
             <div>
-                <span id="mobile-menu-button">
+                <span id="mobile-menu-button" role="button" aria-label="Toggle mobile menu" aria-expanded="false">
                     <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </span>
             </div>
@@ -265,13 +265,15 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuButton.setAttribute('aria-expanded', isOpen.toString());
         });
         const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
         for (let link of mobileMenuLinks) {
             link.addEventListener('click', () => {
                 if (mobileMenu.classList.contains('open')) {
                     mobileMenu.classList.remove('open');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
                 }
             });
         }
@@ -280,6 +282,7 @@
             const hamburgerHidden = window.innerWidth >= 768;
             if (hamburgerHidden && mobileMenu.classList.contains('open')) {
                 mobileMenu.classList.remove('open');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
             }
         }
         window.addEventListener('resize', handleResize);
