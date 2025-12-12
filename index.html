@@ -28,7 +28,7 @@
                 <a href="#contact" class="contact-button">Contact</a>
             </div>
             <div>
-                <span id="mobile-menu-button">
+                <span id="mobile-menu-button" role="button" aria-label="Toggle mobile menu" aria-expanded="false" tabindex="0">
                     <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </span>
             </div>
@@ -143,8 +143,7 @@
                         <p class="description">Music I have created on strudel.cc. Sample below or click through for more music</p>
                         <iframe class="strudel-embed"
   src="https://strudel.cc/#Ly8gcHJlc3MgcGxheSBvciBjdHJsICsgZW50ZXIKCl8kOiBub3RlKCI8WzQ4IDY3IDYzIFs2MiwgNThdXSEyPiwgPFs1NSAtIC0gNTBdITIgWzUzIC0gLSA1MF0hMiBbNDQgLSAtIDUwXSEyIFs0MyAtIC0gNTBdITI%2BIikKICAuc291bmQoInBpYW5vIGdtX2VsZWN0cmljX2d1aXRhcl9tdXRlZCIpLnJvb20oMC44KQogIC5scGYoc2luZS5yYW5nZSg0MDAsIDIwMDApLnNsb3coNCkpCiAgLnBhbihzaW5lLnNsb3coMikpCgpfJDogc291bmQoIltiZCAtIC0gPGJkIHJpbToyPl0gWzxyaW0gaGg%2BXSIpCiAgLmdhaW4oIlswLjcwIFs8LjUwIDAuNjA%2BXV0iKQogIC5iYW5rKCJSb2xhbmRUUjcwNyBbPFJvbGFuZFRSNzA3IFJvbGFuZFRSOTA5Pl0iKQogIC5kZWxheSgiLjUiKQoKXyQ6IG5vdGUoIjxbMzYgMzYgNDMgMzZdIFszNCAzNCA0MSAzNF0gWzMyIDMyIDM5IDMyXSBbMzEgMzEgMzggMzFdPiIpCiAgLmNob3AoNCkKICAvLy5qdXgocmV2KQogIC5zb3VuZCgic2F3dG9vdGgiKQogIC8vLmxwZihzbGlkZXIoNDM4LjQsICIxMDAiLCAiMTAwMCIpKQogIC5scGYoc2luZS5yYW5nZSgiMjAwIiwgIjEwMDAiKS5zbG93KDgpKQogIC5nYWluKGNvc2luZS5yYW5nZSgiMC41IiwgIjEiKS5zbG93KDIpKQogIC8vLnBhbihzaW5lLnNsb3coNCkpCiAgLnJvb20oMC45KSAKICAuZGVsYXkoMC4zKQogIC5zdXN0YWluKDIpIAogIC5zbG93KDIpCgpfJDogbm90ZSgiPFs2MiwgNThdIDYzPiIpCiAgLnNvdW5kKCJwaWFubyBnbV9lbGVjdHJpY19ndWl0YXJfbXV0ZWQiKS5yb29tKDAuOCkKICAubHBmKHNpbmUucmFuZ2UoNDAwLCAyMDAwKS5zbG93KDQpKQogIC5wYW4oc2luZS5zbG93KDIpKQoKXyQ6IG5vdGUoImYjM0A4IGMjM0AzIGQzQDUgYTNAOCBjIzNAMyBkM0A1IGYjMkA4IGMjM0AzIGQzQDUgZDJAOCBkM0AzIikKICAuc2xvdyg4KQogIC5zdHJ1Y3QoInghMTYiKQogIC5zdXN0YWluKDAuNSkKICAuc291bmQoIjxzcXVhcmUgc2F3dG9vdGg%2BIikKICAudHJhbnNwb3NlKCI8LTEyIDA%2BIikKICAuY29hcnNlKDIpCiAgLmRlY2F5KDAuMDc1KQogIC5scGYoc2xpZGVyKDE4OTkuMzUsIDM1MCwgMjAwMCkpCiAgLmdhaW4oMC43NSkKICAuaHBmKDE1MCkKICAuZGVsYXkoMC4yKQogIC5yb29tKDAuMikKCiQ6IHNvdW5kKCJbYmQgLSAtIDxiZCByaW06Mj5dIFs8cmltIFtoaCByaW06Ml0%2BXSwgLSAtIC0gPC0gWy0gLV0%2BIikKICAuZ2FpbigiWzAuNzAgWzwuNTAgMC42MD5dXSIpCiAgLmJhbmsoIlJvbGFuZFRSNzA3IFs8Um9sYW5kVFI3MDcgUm9sYW5kVFI5MDk%2BXSIpCiAgLmZhc3QoMikKICAuZ2FpbigwLjcpCiAgLmRlbGF5KHNsaWRlcigwLjA3NywgMCwgMSkpCiAgLnN1c3RhaW4oc2xpZGVyKDAuMTk4LCAtMiwgMikpCgokOiBjYXQoCiAgICBzdGFjaygiZzMiLCJiMyIsImU0IiksCiAgICBzdGFjaygiYTMiLCJjMyIsImU0IiksCiAgICBzdGFjaygiYjMiLCJkMyIsImZzNCIpLAogICAgc3RhY2soImIzIiwiYzMiLCJkNCIpCiAgICkubm90ZSgpCiAgLmNob3AoIjxbOCAxNl0hMyA4PiIpCiAgLnJvb20oMC4yKQogIC5kZWxheSguMikKICAuc3VzdGFpbigwLjUpCiAgLmdhaW4oMS4yKQogIC5scGYoc2luZS5yYW5nZSgiNTAwIiwgIjEwMDAiKS5zbG93KDQpKQoK"
-  width="800"
-  height="400"
+
   title="Strudel.cc music player embedded demo"
 ></iframe>
                             <br />
@@ -264,14 +263,25 @@
 
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
+        
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuButton.setAttribute('aria-expanded', isOpen.toString());
+        }
+        
+        mobileMenuButton.addEventListener('click', toggleMenu);
+        mobileMenuButton.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.code === 'Space') {
+                e.preventDefault();
+                toggleMenu();
+            }
         });
         const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
         for (let link of mobileMenuLinks) {
             link.addEventListener('click', () => {
                 if (mobileMenu.classList.contains('open')) {
                     mobileMenu.classList.remove('open');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
                 }
             });
         }
@@ -280,6 +290,7 @@
             const hamburgerHidden = window.innerWidth >= 768;
             if (hamburgerHidden && mobileMenu.classList.contains('open')) {
                 mobileMenu.classList.remove('open');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
             }
         }
         window.addEventListener('resize', handleResize);
