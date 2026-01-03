@@ -22,7 +22,7 @@ title: Solutions Architect and Educator
             {% for post in collections.posts | reverse %}
                 <div class="card card-bg">
                     <h3><a href="{{ post.url }}" style="color: inherit;">{{ post.data.title }}</a></h3>
-                    <p class="date" style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.5rem;">{{ post.date | date("yyyy-MM-dd") }}</p>
+                    <p class="date">{{ post.date | date("yyyy-MM-dd") }}</p>
                     <p class="description">{{ post.content | striptags | truncate(150) }}</p>
                     <a href="{{ post.url }}" class="view-link">Read More &rarr;</a>
                 </div>

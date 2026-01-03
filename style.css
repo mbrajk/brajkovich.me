@@ -347,11 +347,22 @@ header .contact-button:hover {
     flex-direction: column;
 }
 
-#projects .card h3,
+#projects .card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
 #blog .card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
+    margin-bottom: -18px;
+}
+
+#blog .card .date {
+    color: var(--text-secondary);
+    margin-top: 0;
 }
 
 #projects .card .description,
