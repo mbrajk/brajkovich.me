@@ -489,6 +489,49 @@ header .contact-button:hover {
     transform: translateY(-3px);
 }
 
+/* Blog Archive */
+.blog-archive {
+    list-style: none;
+    padding: 0;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.blog-archive li {
+    margin-bottom: 1rem;
+}
+
+.blog-archive a {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.blog-archive a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.blog-archive .date {
+    font-family: monospace;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.blog-archive .title {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.blog-archive a:hover .title {
+    color: var(--accent-primary);
+}
+
 footer {
     text-align: center;
     padding: 1.5rem;

@@ -1,0 +1,19 @@
+---
+layout: layout.njk
+title: Blog
+---
+<section class="section">
+    <div class="container">
+        <h1 class="section-title">All Posts</h1>
+        <ul class="blog-archive">
+        {% for post in collections.posts | reverse %}
+            <li>
+                <a href="{{ post.url }}">
+                    <span class="date">[{{ post.date | ymd }}]</span>
+                    <span class="title">{{ post.data.title }}</span>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</section>
