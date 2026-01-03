@@ -485,8 +485,8 @@ header .contact-button:hover {
     transform: translateY(-3px);
 }
 
-.social-icon-linkedin-fix {
-    transform: translateY(-3px);
+.social-icon-youtube-fix {
+    transform: translateY(3px);
 }
 
 /* Blog Archive */
