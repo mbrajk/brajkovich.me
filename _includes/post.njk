@@ -3,13 +3,13 @@ layout: layout.njk
 ---
 <section class="section">
   <div class="container">
+    <div style="max-width: 65ch; margin: 0 auto 2rem auto;">
+      <a href="/blog/" style="color: #818cf8; font-weight: 600; text-decoration: none;">&larr; View other posts</a>
+    </div>
     <h1 class="section-title">{{ title }}</h1>
     <p class="date" style="text-align: center; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">{{ date | date }}</p>
     <article class="prose" style="max-width: 65ch; margin: 0 auto; color: var(--text-primary); line-height: 1.6;">
       {{ content | safe }}
-      <div style="margin-top: 3rem; border-top: 1px solid var(--card-border); padding-top: 2rem; text-align: center;">
-        <a href="/blog/" style="color: #818cf8; font-weight: 600; text-decoration: none;">&larr; View other posts</a>
-      </div>
     </article>
   </div>
 </section>
