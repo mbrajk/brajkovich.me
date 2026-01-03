@@ -321,12 +321,14 @@ header .contact-button:hover {
     margin-top: 0.5rem;
 }
 
-#projects {
+#projects,
+#blog {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
-#projects .project-grid {
+#projects .project-grid,
+#blog .project-grid {
     display: grid;
     gap: 2rem;
     max-width: 72rem;
@@ -334,39 +336,45 @@ header .contact-button:hover {
     margin-right: auto;
 }
 
-#projects .card {
+#projects .card,
+#blog .card {
     display: flex;
     flex-direction: column;
 }
 
-#projects .card h3 {
+#projects .card h3,
+#blog .card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
 }
 
-#projects .card .description {
+#projects .card .description,
+#blog .card .description {
     color: var(--text-secondary);
     margin-top: 0.25rem;
     margin-bottom: 1rem;
     flex-grow: 1;
 }
 
-#projects .card .tags {
+#projects .card .tags,
+#blog .card .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
-#projects .card .view-link {
+#projects .card .view-link,
+#blog .card .view-link {
     color: #818cf8;
     font-weight: 600;
     margin-top: auto;
     transition: color 0.3s ease;
 }
 
-#projects .card .view-link:hover {
+#projects .card .view-link:hover,
+#blog .card .view-link:hover {
     color: var(--text-secondary);
 }
 
@@ -500,7 +508,8 @@ footer {
         font-size: 1.25rem;
     }
 
-    #projects .project-grid {
+    #projects .project-grid,
+    #blog .project-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 

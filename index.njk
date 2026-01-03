@@ -15,6 +15,22 @@ title: Solutions Architect and Educator
     </div>
 </section>
 
+<section id="blog">
+    <div class="container">
+        <h2 class="section-title">Recent Posts</h2>
+        <div class="project-grid">
+            {% for post in collections.posts | reverse %}
+                <div class="card card-bg">
+                    <h3><a href="{{ post.url }}" style="color: inherit;">{{ post.data.title }}</a></h3>
+                    <p class="date" style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.5rem;">{{ post.date | date("yyyy-MM-dd") }}</p>
+                    <p class="description">{{ post.content | striptags | truncate(150) }}</p>
+                    <a href="{{ post.url }}" class="view-link">Read More &rarr;</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 <section id="about">
     <div class="container">
         <h2 class="section-title">About Me</h2>
@@ -100,11 +116,10 @@ title: Solutions Architect and Educator
                 <h3>Strudel.cc music</h3>
                 <p class="description">Music I have created on strudel.cc. Sample below or click through for more music</p>
                 <iframe class="strudel-embed"
-src="https://strudel.cc/#Ly8gcHJlc3MgcGxheSBvciBjdHJsICsgZW50ZXIKCl8kOiBub3RlKCI8WzQ4IDY3IDYzIFs2MiwgNThdXSEyPiwgPFs1NSAtIC0gNTBdITIgWzUzIC0gLSA1MF0hMiBbNDQgLSAtIDUwXSEyIFs0MyAtIC0gNTBdITI%2BIikKICAuc291bmQoInBpYW5vIGdtX2VsZWN0cmljX2d1aXRhcl9tdXRlZCIpLnJvb20oMC44KQogIC5scGYoc2luZS5yYW5nZSg0MDAsIDIwMDApLnNsb3coNCkpCiAgLnBhbihzaW5lLnNsb3coMikpCgpfJDogc291bmQoIltiZCAtIC0gPGJkIHJpbToyPl0gWzxyaW0gaGg%2BXSIpCiAgLmdhaW4oIlswLjcwIFs8LjUwIDAuNjA%2BXV0iKQogIC5iYW5rKCJSb2xhbmRUUjcwNyBbPFJvbGFuZFRSNzA3IFJvbGFuZFRSOTA5Pl0iKQogIC5kZWxheSgiLjUiKQoKXyQ6IG5vdGUoIjxbMzYgMzYgNDMgMzZdIFszNCAzNCA0MSAzNF0gWzMyIDMyIDM5IDMyXSBbMzEgMzEgMzggMzFdPiIpCiAgLmNob3AoNCkKICAvLy5qdXgocmV2KQogIC5zb3VuZCgic2F3dG9vdGgiKQogIC8vLmxwZihzbGlkZXIoNDM4LjQsICIxMDAiLCAiMTAwMCIpKQogIC5scGYoc2luZS5yYW5nZSgiMjAwIiwgIjEwMDAiKS5zbG93KDgpKQogIC5nYWluKGNvc2luZS5yYW5nZSgiMC41IiwgIjEiKS5zbG93KDIpKQogIC8vLnBhbihzaW5lLnNsb3coNCkpCiAgLnJvb20oMC45KSAKICAuZGVsYXkoMC4zKQogIC5zdXN0YWluKDIpIAogIC5zbG93KDIpCgpfJDogbm90ZSgiPFs2MiwgNThdIDYzPiIpCiAgLnNvdW5kKCJwaWFubyBnbV9lbGVjdHJpY19ndWl0YXJfbXV0ZWQiKS5yb29tKDAuOCkKICAubHBmKHNpbmUucmFuZ2UoNDAwLCAyMDAwKS5zbG93KDQpKQogIC5wYW4oc2luZS5zbG93KDIpKQoKXyQ6IG5vdGUoImYjM0A4IGMjM0AzIGQzQDUgYTNAOCBjIzNAMyBkM0A1IGYjMkA4IGMjM0AzIGQzQDUgZDJAOCBkM0AzIikKICAuc2xvdyg4KQogIC5zdHJ1Y3QoInghMTYiKQogIC5zdXN0YWluKDAuNSkKICAuc291bmQoIjxzcXVhcmUgc2F3dG9vdGg%2BIikKICAudHJhbnNwb3NlKCI8LTEyIDA%2BIikKICAuY29hcnNlKDIpCiAgLmRlY2F5KDAuMDc1KQogIC5scGYoc2xpZGVyKDE4OTkuMzUsIDM1MCwgMjAwMCkpCiAgLmdhaW4oMC43NSkKICAuaHBmKDE1MCkKICAuZGVsYXkoMC4yKQogIC5yb29tKDAuMikKCiQ6IHNvdW5kKCJbYmQgLSAtIDxiZCByaW06Mj5dIFs8cmltIFtoaCByaW06Ml0%2BXSwgLSAtIC0gPC0gWy0gLV0%2BIikKICAuZ2FpbigiWzAuNzAgWzwuNTAgMC42MD5dXSIpCiAgLmJhbmsoIlJvbGFuZFRSNzA3IFs8Um9sYW5kVFI3MDcgUm9sYW5kVFI5MDk%2BXSIpCiAgLmZhc3QoMikKICAuZ2FpbigwLjcpCiAgLmRlbGF5KHNsaWRlcigwLjA3NywgMCwgMSkpCiAgLnN1c3RhaW4oc2xpZGVyKDAuMTk4LCAtMiwgMikpCgokOiBjYXQoCiAgICBzdGFjaygiZzMiLCJiMyIsImU0IiksCiAgICBzdGFjaygiYTMiLCJjMyIsImU0IiksCiAgICBzdGFjaygiYjMiLCJkMyIsImZzNCIpLAogICAgc3RhY2soImIzI... [truncated]
-
-title="Strudel.cc music player embedded demo"
-></iframe>
-                    <br />
+                        src="https://strudel.cc/#Ly8gcHJlc3MgcGxheSBvciBjdHJsICsgZW50ZXIKJDogc291bmQoIltiZCAtIC0gPGJkIHJpbToyPl0gWzxyaW0gW2hoIHJpbToyXT5dLCAtIC0gLSA8LSBbLSAtXT4iKQogIC5nYWluKCJbMC43MCBbPC41MCAwLjYwPl1dIikKICAuYmFuaygiUm9sYW5kVFI3MDcgWzxSb2xhbmRUUjcwNyBSb2xhbmRUUjkwOT5dIikKICAuZmFzdCgyKQogIC5nYWluKDAuNykKICAuZGVsYXkoc2xpZGVyKDAuMDc3LCAwLCAxKSkKICAuc3VzdGFpbihzbGlkZXIoMC4xOTgsIC0yLCAyKSkKCiQ6IGNhdCgKICAgIHN0YWNrKCJnMyIsImIzIiwiZTQiKSwKICAgIHN0YWNrKCJhMyIsImMzIiwiZTQiKSwKICAgIHN0YWNrKCJiMyIsImQzIiwiZnM0IiksCiAgICBzdGFjaygiYjMiLCJjMyIsImQ0IikKICAgKS5ub3RlKCkKICAuY2hvcCgiPFs4IDE2XSEzIDg%2BIikKICAucm9vbSgwLjIpCiAgLmRlbGF5KC4yKQogIC5zdXN0YWluKDAuNSkKICAuZ2FpbigxLjIpCiAgLmxwZihzaW5lLnJhbmdlKCI1MDAiLCAiMTAwMCIpLnNsb3coNCkpCgo%3D"
+                        title="Strudel.cc music player embedded demo"
+                ></iframe>
+                <br />
                 <div class="tags">
                     <span class="tag">strudel.cc</span>
                 </div>
@@ -181,22 +196,6 @@ title="Strudel.cc music player embedded demo"
                 <span class="tag">RabbitMQ</span>
                 <span class="tag">Kafka</span>
             </div>
-        </div>
-    </div>
-</section>
-
-<section id="blog">
-    <div class="container">
-        <h2 class="section-title">Recent Posts</h2>
-        <div class="project-grid">
-            {% for post in collections.posts | reverse %}
-                <div class="card card-bg">
-                    <h3><a href="{{ post.url }}" style="color: inherit;">{{ post.data.title }}</a></h3>
-                    <p class="date" style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.5rem;">{{ post.date | date("yyyy-MM-dd") }}</p>
-                    <p class="description">{{ post.content | striptags | truncate(150) }}</p>
-                    <a href="{{ post.url }}" class="view-link">Read More &rarr;</a>
-                </div>
-            {% endfor %}
         </div>
     </div>
 </section>
