@@ -486,7 +486,13 @@ header .contact-button:hover {
 }
 
 .social-icon-youtube-fix {
-    transform: translateY(3px);
+    position: relative;
+    top: 3px;
+}
+
+.social-icon-linkedin-fix {
+    position: relative;
+    top: -3px;
 }
 
 /* Blog Archive */
