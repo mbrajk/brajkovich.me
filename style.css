@@ -321,10 +321,15 @@ header .contact-button:hover {
     margin-top: 0.5rem;
 }
 
-#projects,
+#projects {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
 #blog {
     padding-top: 5rem;
     padding-bottom: 5rem;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #projects .project-grid,
