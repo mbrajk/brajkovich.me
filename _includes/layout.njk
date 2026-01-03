@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Mike Brajkovich</title>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="gradient-bg">
+        <nav>
+            <div class="logo">
+                <a href="/" style="color: white;">Mike Brajkovich</a>
+            </div>
+            <div class="nav-links">
+                <a href="/#banner" class="link-hover">Home</a>
+                <a href="/#about" class="link-hover">About</a>
+                <a href="/#experience" class="link-hover">Experience</a>
+                <a href="/#projects" class="link-hover">Projects</a>
+                <a href="/#skills" class="link-hover">Skills</a>
+                <a href="/#contact" class="contact-button">Contact</a>
+            </div>
+            <div>
+                <span id="mobile-menu-button" role="button" aria-label="Toggle mobile menu" aria-expanded="false" tabindex="0">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </span>
+            </div>
+        </nav>
+        <div id="mobile-menu">
+            <a href="/#banner">Home</a>
+            <a href="/#about">About</a>
+            <a href="/#experience">Experience</a>
+            <a href="/#projects">Projects</a>
+            <a href="/#skills">Skills</a>
+            <a href="/#contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer class="gradient-bg">
+        <p>&copy; 2025 Mike Brajkovich. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuButton.setAttribute('aria-expanded', isOpen.toString());
+        }
+        
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', toggleMenu);
+            mobileMenuButton.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.code === 'Space') {
+                    e.preventDefault();
+                    toggleMenu();
+                }
+            });
+        }
+        
+        const mobileMenuLinks = mobileMenu ? mobileMenu.getElementsByTagName('a') : [];
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
+        function handleResize() {
+            const hamburgerHidden = window.innerWidth >= 768;
+            if (hamburgerHidden && mobileMenu && mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            }
+        }
+        window.addEventListener('resize', handleResize);
+
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollMiddle = window.scrollY + window.innerHeight / 2;
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                if (scrollMiddle >= sectionTop && scrollMiddle < sectionBottom) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

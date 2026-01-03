@@ -1,0 +1,12 @@
+---
+layout: layout.njk
+---
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">{{ title }}</h1>
+    <p class="date" style="text-align: center; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">{{ date | date("yyyy-MM-dd") }}</p>
+    <article class="prose" style="max-width: 65ch; margin: 0 auto; color: var(--text-primary); line-height: 1.6;">
+      {{ content | safe }}
+    </article>
+  </div>
+</section>
