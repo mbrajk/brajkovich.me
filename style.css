@@ -197,6 +197,7 @@ header .contact-button:hover {
     justify-content: center;
     text-align: center;
     color: var(--white);
+    overflow: hidden;
 }
 
 #banner .overlay {
