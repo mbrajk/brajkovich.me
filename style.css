@@ -197,6 +197,7 @@ header .contact-button:hover {
     justify-content: center;
     text-align: center;
     color: var(--white);
+    overflow: hidden;
 }
 
 #banner .overlay {
@@ -217,6 +218,7 @@ header .contact-button:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: rotate(0.8deg);
 }
 
 #banner .content {
