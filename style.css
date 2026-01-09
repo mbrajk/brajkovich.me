@@ -538,6 +538,16 @@ header .contact-button:hover {
     color: var(--accent-primary);
 }
 
+.prose a {
+    color: #818cf8;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.prose a:hover {
+    color: var(--text-secondary);
+}
+
 footer {
     text-align: center;
     padding: 1.5rem;
