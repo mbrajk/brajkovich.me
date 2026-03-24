@@ -538,6 +538,31 @@ header .contact-button:hover {
     color: var(--accent-primary);
 }
 
+.post-back-link {
+    max-width: 65ch;
+    margin: 0 auto 2rem auto;
+}
+
+.post-back-link a {
+    color: #818cf8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.post-date {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+}
+
+.prose {
+    max-width: 65ch;
+    margin: 0 auto;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
 .prose a {
     color: #818cf8;
     font-weight: 600;
