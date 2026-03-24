@@ -23,7 +23,7 @@ title: Solutions Architect and Educator
                 <div class="card card-bg">
                     <h3><a href="{{ post.url }}" style="color: inherit;">{{ post.data.title }}</a></h3>
                     <p class="date">{{ post.date | date("yyyy-MM-dd") }}</p>
-                    <p class="description">{{ post.content | striptags | truncate(150) }}</p>
+                    <p class="description">{{ post.data.excerpt }}</p>
                     <a href="{{ post.url }}" class="view-link">Read More &rarr;</a>
                 </div>
             {% endfor %}
